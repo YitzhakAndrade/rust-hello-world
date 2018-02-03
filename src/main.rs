@@ -1,5 +1,31 @@
 fn main() {
-    exercicio_loop();
+    exercicio_ownership();
+}
+
+fn grita(string: String) {
+    println!("{}", string.to_uppercase());
+}
+
+fn grita_ref(string: &String) {
+    println!("{}", string.to_uppercase());
+}
+
+fn grita_mas_grita_baixo(string: &mut String) {
+    println!("original {}", string);
+    string.push('.');
+    string.push('.');
+    string.push('.');
+    println!("mutada {}", string.to_uppercase());
+    println!("original {}", string);
+}
+
+fn exercicio_ownership() {
+    let mut t = "tchau".to_string();
+    //grita_ref(&t);
+    //grita_ref(&t);
+
+    grita_mas_grita_baixo(&mut t);
+    grita_ref(&t);
 }
 
 fn exercicio_loop() {
