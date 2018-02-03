@@ -1,0 +1,6 @@
+[package]
+name = "roadshow"
+version = "0.1.0"
+authors = ["Yitzhak Andrade <yitzhakandrade@gmail.com>"]
+
+[dependencies]
